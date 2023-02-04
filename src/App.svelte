@@ -21,7 +21,4 @@
   h1 {
     color: orangered;
   }
-  p {
-    color: white;
-  }
 </style>
