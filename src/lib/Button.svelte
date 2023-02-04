@@ -8,7 +8,7 @@
 
 
 
-<style>
+<style lang="scss">
   button {
     border: none;
     background-color: orangered;
@@ -17,5 +17,9 @@
     font-weight: bold;
     border-radius: 5rem;
     cursor: pointer;
+
+    &:hover {
+      background-color: rgb(255, 100, 50);
+    }
   }
 </style>
