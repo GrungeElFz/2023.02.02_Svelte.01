@@ -19,7 +19,7 @@
     cursor: pointer;
 
     &:hover {
-      background-color: rgb(255, 100, 50);
+      background-color: variables.$color;
     }
   }
 </style>
