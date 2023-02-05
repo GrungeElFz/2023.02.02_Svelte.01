@@ -12,7 +12,7 @@
 <p>{@html text}</p>
 
 <Counter />
-<Button>Button Text</Button>
+<Button size='small' shadow>Button Text</Button>
 
 
 
