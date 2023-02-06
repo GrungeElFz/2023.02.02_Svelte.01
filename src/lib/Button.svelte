@@ -8,12 +8,18 @@
 
 
 <button 
-  class:size-sm={size === 'small'}
-  class:size-lg={size === 'large'}
-  class:shadow={shadow}
   style:--buttonBgColor={bgColor}
   style:--buttonTextColor={textColor}
+  class:size-sm={size === 'small'}
+  class:size-lg={size === 'large'}
+  class:has-left={$$slots.leftContent}
+  class:shadow={shadow}
 >
+  {#if $$slots.leftContent}
+    <div class="left-content">
+      <slot name="leftContent" />
+    </div>
+  {/if}
   <slot>Fallback</slot>
 </button>
 
@@ -21,12 +27,17 @@
 
 <style lang="scss">
   button {
+    display: flex;
+    align-items: center;
     border: none;
     background-color: var(--buttonBgColor);
     color: var(--buttonTextColor);
     font-weight: bold;
     border-radius: 5rem;
     cursor: pointer;
+    .left-content {
+      margin-right: 1rem;
+    }
     &:hover {
       background-image: linear-gradient(orangered, red, orangered);
     }

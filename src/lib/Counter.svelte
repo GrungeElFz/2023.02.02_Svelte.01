@@ -12,5 +12,6 @@
 <style>
   button {
     padding: 1rem 2rem;
+    margin: 1rem auto 2rem;
   }
 </style>

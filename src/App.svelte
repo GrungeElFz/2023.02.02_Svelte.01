@@ -12,7 +12,10 @@
 <p>{@html text}</p>
 
 <Counter />
-<Button size='small' shadow>Button Text</Button>
+<Button size='small' shadow>
+  <span slot="leftContent">Left</span>
+  Button Text
+</Button>
 
 
 
