@@ -1,4 +1,6 @@
 :root {
   background-color: black;
   color: white;
+  --buttonBgColor: orangered;
+  --buttonTextColor: white;
 }
