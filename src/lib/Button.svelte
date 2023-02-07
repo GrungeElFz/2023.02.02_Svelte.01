@@ -3,6 +3,8 @@
   export let shadow = false;
   export let bgColor = 'inherit';
   export let textColor = 'inherit';
+
+  let isLeftHover;
 </script>
 
 
@@ -16,11 +18,15 @@
   class:shadow={shadow}
 >
   {#if $$slots.leftContent}
-    <div class="left-content">
+    <div 
+      class="left-content" 
+      on:mouseenter={() => (isLeftHover = true)}
+      on:mouseleave={() => (isLeftHover = false)}
+    >
       <slot name="leftContent" />
     </div>
   {/if}
-  <slot>Fallback</slot>
+  <slot {isLeftHover}>Fallback</slot>
 </button>
 
 

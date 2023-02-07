@@ -2,6 +2,7 @@
   import Counter from "./lib/Counter.svelte";
   import Button from "./lib/Button.svelte";
   import IoIosAnalytics from 'svelte-icons/io/IoIosAnalytics.svelte'
+  import IoIosAddCircle from 'svelte-icons/io/IoIosAddCircle.svelte'
 
   let name = 'Svelte'
   let logo = 'https://kit.svelte.dev/_app/immutable/assets/svelte-logo-5c5d7d20.svg'
@@ -13,12 +14,13 @@
 <p>{@html text}</p>
 
 <Counter />
-<Button size='small' shadow>
-  <div 
-    style:width='2rem' 
-    slot="leftContent"
-  >
-    <IoIosAnalytics />
+<Button let:isLeftHover size='small' shadow>
+  <div style:width='2rem' slot="leftContent">
+    {#if isLeftHover}
+      <IoIosAnalytics />
+    {:else}
+      <IoIosAddCircle />
+    {/if}
   </div>
     Button Text
 </Button>
