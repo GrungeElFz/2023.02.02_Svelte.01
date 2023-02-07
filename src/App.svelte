@@ -1,6 +1,7 @@
 <script>
   import Counter from "./lib/Counter.svelte";
   import Button from "./lib/Button.svelte";
+  import IoIosAnalytics from 'svelte-icons/io/IoIosAnalytics.svelte'
 
   let name = 'Svelte'
   let logo = 'https://kit.svelte.dev/_app/immutable/assets/svelte-logo-5c5d7d20.svg'
@@ -13,8 +14,13 @@
 
 <Counter />
 <Button size='small' shadow>
-  <span slot="leftContent">Left</span>
-  Button Text
+  <div 
+    style:width='2rem' 
+    slot="leftContent"
+  >
+    <IoIosAnalytics />
+  </div>
+    Button Text
 </Button>
 
 
