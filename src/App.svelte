@@ -14,7 +14,10 @@
 <p>{@html text}</p>
 
 <Counter />
-<Button let:isLeftHover size='small' shadow>
+<Button 
+  on:click|once={(event) => alert(true)} 
+  let:isLeftHover size='small' shadow
+  >
   <div style:width='2rem' slot="leftContent">
     {#if isLeftHover}
       <IoIosAnalytics />

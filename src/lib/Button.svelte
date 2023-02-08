@@ -9,7 +9,8 @@
 
 
 
-<button 
+<button
+  on:click|preventDefault
   style:--buttonBgColor={bgColor}
   style:--buttonTextColor={textColor}
   class:size-sm={size === 'small'}
