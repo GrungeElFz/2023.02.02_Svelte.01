@@ -1,6 +1,7 @@
 <script>
   import Counter from "./lib/Counter.svelte";
   import Button from "./lib/Button.svelte";
+  import LockButton from "./lib/LockButton.svelte"
   import IoIosAnalytics from 'svelte-icons/io/IoIosAnalytics.svelte'
   import IoIosAddCircle from 'svelte-icons/io/IoIosAddCircle.svelte'
 
@@ -14,6 +15,7 @@
 <p>{@html text}</p>
 
 <Counter />
+<LockButton />
 <Button 
   on:click|once={(event) => alert(true)} 
   let:isLeftHover size='small' shadow
