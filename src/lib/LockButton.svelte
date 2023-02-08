@@ -10,7 +10,10 @@
 </script>
 
 
-<button on:click={switchLock}>
+<button on:click={switchLock}
+  class:button-unlocked={lockStatus}
+  class:button-locked={!lockStatus}
+>
   {#if lockStatus}
     Button is unlocked
   {:else if !lockStatus}
@@ -22,7 +25,21 @@
 
 <style>
   button {
-    padding: 1rem 2rem;
-    margin: 1rem auto 2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    color: var(--buttonTextColor);
+    border: none;
+    border-radius: 5rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .button-unlocked {
+    background-color: rgb(80, 200, 80);
+    padding: 0.5rem 6rem;
+  }
+  .button-locked {
+    background-color: red;
+    padding: 0.5rem 6.5rem;
   }
 </style>
